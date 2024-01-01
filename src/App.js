@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css';
+import Navbar from './Navbar'
 import {
   BrowserRouter,
   Route,
@@ -9,11 +10,12 @@ import {
 import EmployeeDetails from './pages/EmployeeDetails';
 import MainPage from './pages/MainPage';
 
+
 const App = () => {
   return (
     <BrowserRouter>
       <div className="App">
-
+      <Navbar/>
         <Routes>
 
           <Route path="/" element={<MainPage/>} />
@@ -21,6 +23,7 @@ const App = () => {
         </Routes>
 
       </div>
+     
     </BrowserRouter>
   );
 }
