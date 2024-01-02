@@ -58,7 +58,7 @@ const Form = () => {
                                 </div>
                                 <div>
                                     <label for="Employee_img" class="flex block mb-2 text-sm font-medium text-gray-900 dark:text-white">Employee Image</label>
-                                    <input type="url"
+                                    <input type="text"
                                         name="employee_img"
                                         id="employee_img"
                                         placeholder="••••••••"
