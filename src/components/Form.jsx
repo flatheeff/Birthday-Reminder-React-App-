@@ -5,10 +5,22 @@ import supabase from '../supabase/Supabase'
 const Form = () => {
 
     const { register, handleSubmit } = useForm()
-    
-    const myfunction = (details) => {
+
+    const myfunction = async (details) => {
         console.log(details);
 
+
+        const { data, error } = await supabase
+            .from('Birthday')
+            .upsert(
+                { 
+                    Employee_Name:details.employee_name,
+                    Date_of_Birth:details.date_of_birth,
+                    Gender:details.gender,
+                    Employee_img:details.employee_img
+                 }
+                 )
+            .select()
     }
 
 
@@ -58,7 +70,7 @@ const Form = () => {
                                 </div>
                                 <div>
                                     <label for="Employee_img" class="flex block mb-2 text-sm font-medium text-gray-900 dark:text-white">Employee Image</label>
-                                    <input type="url"
+                                    <input type="text"
                                         name="employee_img"
                                         id="employee_img"
                                         placeholder="••••••••"
