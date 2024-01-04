@@ -17,7 +17,7 @@ import Footer from './components/Footer'
 const App = () => {
   return (
     <BrowserRouter>
-  <div className=" bg-black bg-opacity-75 bg-no-repeat bg-cover bg-[url('https://img.freepik.com/free-vector/flat-golden-circle-balloons-birthday-background_52683-34659.jpg')] bg-blend-darken">
+  <div className="bg-opacity-75 bg-no-repeat bg-cover bg-[url('https://img.freepik.com/free-vector/flat-golden-circle-balloons-birthday-background_52683-34659.jpg')] bg-blend-darken">
       <Navbar/>
         <Routes>
 
