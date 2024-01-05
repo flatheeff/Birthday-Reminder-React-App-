@@ -36,13 +36,13 @@ const SingleEmployee = () => {
                 >
                   <img
                     class="mx-auto mb-4 w-36 h-36 rounded-full"
-                    src={singleObject.Employee_img}
+                    src={item.Employee_img}
                     alt=""
                   />
                   <h3 class="mb-1 text-2xl font-bold tracking-tight text-white">
                     <a href="#">{item.Employee_Name}</a>
                   </h3>
-                  <p>{singleObject.Status}</p>
+                  <p>{item.Status}</p>
                 </div>
               </div>
             </div>
