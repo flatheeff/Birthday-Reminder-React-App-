@@ -13,14 +13,14 @@ const Form = () => {
         const { data, error } = await supabase
             .from('Birthday')
             .upsert(
-                { 
-                    Employee_Name:details.employee_name,
-                    Date_of_Birth:details.date_of_birth,
-                    Gender:details.gender,
-                    Employee_img:details.employee_img,
-                    Status:details.status
-                 }
-                 )
+                {
+                    Employee_Name: details.employee_name,
+                    Date_of_Birth: details.date_of_birth,
+                    Gender: details.gender,
+                    Employee_img: details.employee_img,
+                    Status: details.status
+                }
+            )
             .select()
     }
 
@@ -89,7 +89,8 @@ const Form = () => {
                                         required=""
                                         {...register("status")} />
                                 </div>
-                                <button type="submit" class="w-full bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 border-2 border-black text-black">Register</button>
+
+                                <button type="submit" class="w-full text-black bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">Register</button>
 
                             </form>
                         </div>
