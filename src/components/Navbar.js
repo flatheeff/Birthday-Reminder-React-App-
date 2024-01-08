@@ -12,7 +12,7 @@ const Navbar = () => {
         <p className='hover:text-yellow-500 text-white border-2 border-purple-500 font-bold p-2'>
         <Link to="/register" >Employee Details</Link>
       </p>
-      <p className='hover:text-yellow-500 text-white border-2 border-purple-500  font-bold p-2 '>Contact</p>
+     
       
 
       

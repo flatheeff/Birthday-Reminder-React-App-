@@ -42,7 +42,7 @@ const SingleEmployee = () => {
                   <h3 class="mb-1 text-2xl font-bold tracking-tight text-white">
                     <a href="#">{item.Employee_Name}</a>
                   </h3>
-                  <p>{item.Status}</p>
+                  <p className="text-black text-bold">{item.Status}</p>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ const SingleEmployee = () => {
                         </h5>
                       </div>
 
-                      <p className="font-normal text-gray-700 dark:text-gray-400">
+                      <p className="font-normal text-black">
                         {singleObject.Status}
                       </p>
                       <div className="flex w-full justify-between pt-20">
