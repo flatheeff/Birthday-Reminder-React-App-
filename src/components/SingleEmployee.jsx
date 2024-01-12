@@ -72,13 +72,26 @@ const SingleEmployee = () => {
                       <p className="font-normal text-black">
                         {singleObject.Status}
                       </p>
-                      <div className="flex w-full justify-between pt-20">
+                      <div className="flex p-3 justify-between text-lg font-bold gap-96 items-center justify-center">
+                      <div className="flex w-full justify-between  gap-2 items-center p-5 justify-center">
                         <p className="border-2 p-3 rounded-xl">
-                          {singleObject.Date_of_Birth}
+                          {singleObject.Date}
                         </p>
+                        <p className="border-2 p-3 rounded-xl">
+                          {singleObject.Month}
+                        </p>
+                        <p className="border-2 p-3 rounded-xl">
+                          {singleObject.Year}
+                        </p>
+                        </div>
+                        <div className="items-center justify-between justify-center">
                         <p className="border-2 p-3 rounded-xl">{singleObject.Gender}</p>
+                        </div>
                       </div>
-                    </div>
+                      
+                       
+                      </div>
+                    
                   </Card>
                 </Modal.Body>
               </Modal>
