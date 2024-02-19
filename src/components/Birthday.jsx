@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import supabase from '../supabase/Supabase';
+import SingleEmployee from './SingleEmployee';
 
 const Birthday = () => {
-  const [Day, setDay] = useState(0);
-  const [Month, setMonth] = useState('');
+
+  const [BirthdayEmployees, setBirthdayEmployees] = useState([]);
+
+  useEffect(() => {
+    birth()
+
+  }, []);
 
   const getTodayDayAndMonth = async () => {
     const today = await new Date();
@@ -19,37 +25,35 @@ const Birthday = () => {
     // Add leading zero if day is less than 10
     day = day < 10 ? `0${day}` : day;
 
-    setDay(day);
-    setMonth(month);
-
     console.log(`Today is ${day}/${month}`);
+    return {
+      day, month
+    }
   };
 
   const birth = async () => {
-    
-      await getTodayDayAndMonth(); // Wait for getTodayDayAndMonth() to complete
-      console.log(Day, Month);
 
-      const { data, error } = await supabase
-        .from('Birthday')
-        .select()
-        .eq('Date', Day); // Filter by Date
-      // .eq('Month', Month);
+    const { day, month } = await getTodayDayAndMonth(); // Wait for getTodayDayAndMonth() to complete
 
-      console.log(data);
-      if (error) {
-        console.log(error);
-      }
-   
+    const { data, error } = await supabase
+      .from('Birthday')
+      .select()
+      .eq('Date', day)
+      .eq('Month', month); // Assuming 'population' is another column you want to filter on
+    console.log(data)
+    setBirthdayEmployees(data)
+
+    console.log(data);
+    if (error) {
+      console.log(error);
+    }
+
   };
-
-  useEffect(() => {
-    birth();
-  }, []); // Call birth() on initial render
 
   return (
     <div>
       <h1 className='text-white font-bold text-4xl italic text-center'>TODAY BIRTHDAY</h1>
+      <SingleEmployee employees={BirthdayEmployees} />
     </div>
   );
 };

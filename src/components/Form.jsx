@@ -7,7 +7,7 @@ const Form = () => {
     const options = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 
-    const { register, handleSubmit } = useForm()
+    const { register, handleSubmit, reset } = useForm()
 
 
 
@@ -29,6 +29,8 @@ const Form = () => {
                 }
             )
             .select()
+            reset()
+            window.alert("Registered Successfully")
     }
 
 

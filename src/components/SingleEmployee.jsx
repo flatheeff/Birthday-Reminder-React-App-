@@ -1,24 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Button, Modal, Card } from "flowbite-react";
-import supabase from "../supabase/Supabase";
 
-const SingleEmployee = () => {
+
+const SingleEmployee = ({employees}) => {
   const [openModal, setOpenModal] = useState(false);
-  const [employees, setEmployees] = useState([]);
+  
   const [singleObject, setsingleObject] = useState({})
-
-  const fetchEmployee = async () => {
-    const { data, error } = await supabase
-      .from("Birthday")
-      .select();
-
-    console.log(data);
-    setEmployees(data);
-  };
-
-  useEffect(() => {
-    fetchEmployee();
-  }, []);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4">
