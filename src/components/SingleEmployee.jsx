@@ -37,7 +37,7 @@ const SingleEmployee = ({employees}) => {
             {/* EmployeeDetailModal */}
             <div>
               <Modal
-                className=" w-full p-80 bg-opacity-45"
+                className=" w-full px-80 bg-opacity-45"
                 show={openModal}
                 onClose={() => setOpenModal(false)}
               >
@@ -59,8 +59,8 @@ const SingleEmployee = ({employees}) => {
                       <p className="font-normal text-black">
                         {singleObject.Status}
                       </p>
-                      <div className="flex p-3 justify-between text-lg font-bold gap-96 items-center justify-center">
-                      <div className="flex w-full justify-between  gap-2 items-center p-5 justify-center">
+                      <div className="flex justify-between text-lg font-bold gap-64 items-center justify-center">
+                      <div className="flex w-full justify-between  gap-2 items-center px-5 justify-center">
                         <p className="border-2 p-3 rounded-xl">
                           {singleObject.Date}
                         </p>

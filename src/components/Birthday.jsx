@@ -51,8 +51,9 @@ const Birthday = () => {
   };
 
   return (
-    <div>
+    <div className="w-full flex flex-col items-center justify-center p-14">
       <h1 className='text-white font-bold text-4xl italic text-center'>TODAY BIRTHDAY</h1>
+      
       <SingleEmployee employees={BirthdayEmployees} />
     </div>
   );
