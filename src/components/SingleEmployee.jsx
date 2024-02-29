@@ -29,7 +29,7 @@ const SingleEmployee = ({employees}) => {
                   <h3 class="mb-1 text-2xl font-bold tracking-tight text-white">
                     <a href="#">{item.Employee_Name}</a>
                   </h3>
-                  <p className="text-black text-bold">{item.Status}</p>
+                  <p className="text-white text-bold">{item.Status}</p>
                 </div>
               </div>
             </div>
