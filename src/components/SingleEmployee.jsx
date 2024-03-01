@@ -1,15 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Button, Modal, Card } from "flowbite-react";
+import supabase from "../supabase/Supabase";
 
 
-const SingleEmployee = ({employees}) => {
+const SingleEmployee = ({ employees, DeleteEmployee }) => {
   const [openModal, setOpenModal] = useState(false);
-  
+  const [deleteId, setDeleteId] = useState('');
+
   const [singleObject, setsingleObject] = useState({})
+  console.log(singleObject);
+
+  const deleteUser = async (id) => {
+
+    DeleteEmployee(id);
+    setOpenModal(false)
+
+  }
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-4">
-      {employees.map((item) => (
+      {employees?.map((item) => (
         <div key={item.id} className="w-full">
           <section>
             <div class="py-4 px-4 mx-auto max-w-screen-xl text-center lg:py-8 lg:px-6">
@@ -18,6 +28,7 @@ const SingleEmployee = ({employees}) => {
                   onClick={() => {
                     setOpenModal(true)
                     setsingleObject(item)
+                    setDeleteId(item.id)
                   }}
                   class="text-center text-gray-500 dark:text-gray-400"
                 >
@@ -60,25 +71,28 @@ const SingleEmployee = ({employees}) => {
                         {singleObject.Status}
                       </p>
                       <div className="flex justify-between text-lg font-bold gap-64 items-center justify-center">
-                      <div className="flex w-full justify-between  gap-2 items-center px-5 justify-center">
-                        <p className="border-2 p-3 rounded-xl">
-                          {singleObject.Date}
-                        </p>
-                        <p className="border-2 p-3 rounded-xl">
-                          {singleObject.Month}
-                        </p>
-                        <p className="border-2 p-3 rounded-xl">
-                          {singleObject.Year}
-                        </p>
+                        <div className="flex w-full justify-between  gap-2 items-center px-5 justify-center">
+                          <p className="border-2 p-3 rounded-xl">
+                            {singleObject.Date}
+                          </p>
+                          <p className="border-2 p-3 rounded-xl">
+                            {singleObject.Month}
+                          </p>
+                          <p className="border-2 p-3 rounded-xl">
+                            {singleObject.Year}
+                          </p>
                         </div>
                         <div className="items-center justify-between justify-center">
-                        <p className="border-2 p-3 rounded-xl">{singleObject.Gender}</p>
+                          <p className="border-2 p-3 rounded-xl">{singleObject.Gender}</p>
                         </div>
                       </div>
-                      
-                       
+
+                      <div className="bg-red-600 text-white p-2">
+                        <button onClick={() => deleteUser(singleObject.id)}>delete</button>
                       </div>
-                    
+
+                    </div>
+
                   </Card>
                 </Modal.Body>
               </Modal>

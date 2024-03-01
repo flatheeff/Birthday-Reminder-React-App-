@@ -22,27 +22,27 @@ const App = () => {
   return (
 
     <BrowserRouter>
-  <div className="bg-opacity-75 bg-no-repeat bg-cover bg-[url('https://files.123freevectors.com/wp-content/original/510596-blue-birthday-background-image.jpg')] bg-blend-darken">
+      <div className="bg-opacity-75 bg-no-repeat bg-cover bg-[url('https://files.123freevectors.com/wp-content/original/510596-blue-birthday-background-image.jpg')] bg-blend-darken">
 
-      <Navbar/>
-     
-    
+        {/* <Navbar /> */}
+
+
         <Routes>
-
-          <Route path="/" element={<MainPage/>} />
-          <Route path="front" element={<FrontPage/>}/>
-          <Route path="/login" element={<LoginPage/> }/>
-          <Route path="/signup" element={<SignupPage/>}/>
+          <Route path="/home" element={<MainPage />} />
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
           <Route path="/details" element={<EmployeeDetails />} />
-          <Route path="/register" element={<Register/>}/>
-          <Route path="/birthday" element={<Birth/>}/>
-                  </Routes>
-        <Footer/>
-        
+          <Route path="/register" element={<Register />} />
+          <Route path="/birthday" element={<Birth />} />
+        </Routes>
+
+        <Footer />
+
       </div>
-     
-     
-      </BrowserRouter>
+
+
+    </BrowserRouter>
   );
 }
 

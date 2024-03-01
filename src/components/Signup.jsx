@@ -2,11 +2,14 @@ import React from "react";
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import supabase from '../supabase/Supabase'
+import { useNavigate} from 'react-router-dom'
 
 
 const Signup = () => {
 
+    const navigate = useNavigate();
 
+    
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -24,6 +27,11 @@ const Signup = () => {
                 }
             )
             .select()
+            setUsername("")
+            setEmail("")
+            setPassword("")
+            navigate('/login')
+    
     }
 
 
