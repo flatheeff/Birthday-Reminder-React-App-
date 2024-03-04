@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 const Front = () => {
   return (
     <div>
+      <div className='flex p-5 justify-between text-lg items-center text-white font-bold'>
+      <img className='md:44 w-44' src="https://png.pngtree.com/png-clipart/20221122/ourmid/pngtree-happy-birthday-text-effect-png-image_241348.png" alt=""/>
+      </div>
 
         <div className="flex flex-col text-center p-36 text-black  justify-center items-center gap-10">
             <h1 className="md:text-5xl text-white font-bold italic ">BIRTHDAY</h1>

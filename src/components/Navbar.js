@@ -13,7 +13,7 @@ const Navbar = () => {
         <Link to="/details">Employee Details</Link>
       </p>
      
-      <p className="hover:text-yellow-500 text-white border-2 border-purple-500 font-bold p-2"><Link to="/register">Register</Link></p>
+      <p className="hover:text-yellow-500 text-white border-2 border-purple-500 font-bold p-2"><Link to="/register">Add Birthday</Link></p>
 
       
       </div>

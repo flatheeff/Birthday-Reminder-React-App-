@@ -39,6 +39,9 @@ const Signup = () => {
     return (
 
         <div>
+            <div className='flex p-5 justify-between text-lg items-center text-white font-bold'>
+      <img className='md:44 w-44' src="https://png.pngtree.com/png-clipart/20221122/ourmid/pngtree-happy-birthday-text-effect-png-image_241348.png" alt=""/>
+      </div>
             <section class=" dark:bg-gray-900">
                 <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
 
