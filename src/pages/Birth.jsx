@@ -1,14 +1,14 @@
 import React from 'react'
-import Form from '../components/Form'
+import Birthday from '../components/Birthday'
 import Navbar from '../components/Navbar'
 
-const Register = () => {
+const Birth = () => {
   return (
     <div>
       <Navbar/>
-           <Form/>
+        <Birthday/>
     </div>
   )
 }
 
-export default Register
+export default Birth
